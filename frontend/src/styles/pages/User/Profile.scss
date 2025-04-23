@@ -1,0 +1,88 @@
+.profile-wrapper {
+  @include box-shadow;
+  padding: 50px;
+  display: grid;
+  border-radius: 10px;
+  box-sizing: border-box;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 100px;
+  background: #fff; // Clean white background for the profile section
+  font-family: 'Times New Roman', serif; // Apply Times New Roman globally
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for a modern look
+
+  .left-panel {
+    text-align: center;
+
+    .person-icon {
+      * {
+        font-size: 4rem;
+        color: $theme-primary; // Use primary theme color for the icon
+      }
+    }
+
+    .username {
+      padding: 20px 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333; // Darker color for better readability
+    }
+
+    .user-role {
+      font-size: 1rem;
+      color: #555; // Subtle gray for secondary text
+    }
+  }
+
+  .right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; // Add spacing between profile details
+
+    .profile-detail {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #f9f9f9; // Light gray background for profile details
+      border-radius: 5px; // Rounded corners for a modern look
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Subtle shadow for details
+      font-size: 1rem;
+      color: #333;
+
+      .detail-label {
+        font-weight: bold;
+        color: #555; // Subtle gray for labels
+      }
+
+      .detail-value {
+        color: #333; // Darker color for values
+      }
+    }
+
+    .skeleton {
+      height: 30px;
+      width: 200px;
+      background: $theme-gray; // Use theme gray for skeleton loading
+      margin-top: 30px;
+      border-radius: 10px;
+    }
+  }
+
+  .edit-profile-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #1a73e8; // Primary blue background
+    color: white;
+    border: none;
+    border-radius: 5px; // Rounded corners for consistency
+    font-size: 1rem;
+    font-family: 'Times New Roman', serif; // Consistent font
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background: #155bb5; // Darker blue on hover
+      transform: scale(1.05); // Slight zoom effect
+    }
+  }
+}

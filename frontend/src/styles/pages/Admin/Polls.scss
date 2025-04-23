@@ -1,0 +1,86 @@
+.end-election-button {
+  margin-top: 50px;
+  padding: 12px 20px; // Add padding for better usability
+  font-size: 1rem; // Standardize font size
+  font-family: 'Times New Roman', serif; // Consistent font
+  background: #1a73e8; // Primary blue background
+  color: white;
+  border: none;
+  border-radius: 5px; // Rounded corners for a modern look
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background: #155bb5; // Darker blue on hover
+    transform: scale(1.05); // Slight zoom effect
+  }
+
+  &:disabled {
+    background: #ccc; // Gray background for disabled state
+    cursor: not-allowed;
+  }
+}
+
+.polls-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; // Add spacing between poll items
+
+  .poll-item {
+    padding: 15px 20px;
+    background: #f9f9f9; // Light gray background for poll items
+    border-radius: 10px; // Rounded corners for a modern look
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for a clean look
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Times New Roman', serif; // Consistent font
+    font-size: 1rem;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px); // Slight lift on hover
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); // Enhanced shadow on hover
+    }
+
+    .poll-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .poll-actions {
+      display: flex;
+      gap: 10px;
+
+      button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        font-family: 'Times New Roman', serif; // Consistent font
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease;
+
+        &.edit-button {
+          background: #ffc107; // Yellow background for edit button
+          color: #333;
+
+          &:hover {
+            background: #e0a800; // Darker yellow on hover
+          }
+        }
+
+        &.delete-button {
+          background: #d93025; // Red background for delete button
+          color: white;
+
+          &:hover {
+            background: #a61b1b; // Darker red on hover
+          }
+        }
+      }
+    }
+  }
+}

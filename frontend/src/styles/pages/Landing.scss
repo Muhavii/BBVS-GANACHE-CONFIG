@@ -1,0 +1,100 @@
+.landing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+
+  font-family: 'Times New Roman', serif; // Apply Times New Roman globally
+  color: #333;
+
+  .left {
+    padding: 120px 100px; // Adjusted padding for better alignment
+    background: #1a73e8; // Modern blue theme
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .logo {
+      padding-bottom: 50px;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 150px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Added shadow effect
+      }
+    }
+
+    .title-large {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); // Subtle text shadow
+    }
+
+    .title-small {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); // Subtle text shadow
+    }
+
+    .button-wrapper {
+      padding-top: 50px;
+      display: flex;
+      gap: 20px;
+
+      .button-black {
+        background: black;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #333;
+          transform: scale(1.05); // Slight zoom on hover
+        }
+      }
+
+      .button-white {
+        background: white;
+        color: black;
+        border: 2px solid black;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #f0f0f0;
+          transform: scale(1.05); // Slight zoom on hover
+        }
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
+
+    img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Added shadow effect
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05); // Slight zoom on hover
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); // Enhanced shadow on hover
+      }
+    }
+  }
+}

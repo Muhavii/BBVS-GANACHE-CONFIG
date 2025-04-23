@@ -1,0 +1,80 @@
+.default-container {
+  min-height: 80vh;
+  display: flex;
+  font-family: 'Times New Roman', serif; // Apply Times New Roman globally
+
+  .default-sidebar-container {
+    width: 100px;
+
+    .hamburger {
+      font-size: 2rem;
+      color: $theme-black;
+      padding: 20px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1); // Slight zoom effect on hover
+      }
+    }
+
+    .default-sidebar {
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      width: 30vw;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: $theme-primary;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Subtle shadow for the sidebar
+
+      .hamburger {
+        font-size: 2rem;
+        color: white;
+      }
+
+      .default-sidebar-link {
+        padding: 20px;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+        transition: background 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+          background-color: $theme-secondary; // Highlight on hover
+          transform: translateX(10px); // Slight slide effect on hover
+        }
+      }
+    }
+  }
+
+  .default-content {
+    flex: 1;
+    padding: 50px; // Adjusted padding for better spacing
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9; // Light background for the content area
+    border-radius: 10px; // Rounded corners for a modern look
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for the content area
+  }
+}
+
+.display {
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.hide {
+  transform: translateX(-800px);
+  transition: transform 0.3s ease;
+}
+
+.active {
+  background-color: $theme-secondary;
+  color: white;
+}

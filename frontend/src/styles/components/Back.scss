@@ -1,0 +1,32 @@
+.back {
+  position: absolute;
+  left: 20px; // Adjusted for better alignment
+  top: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px; // Add spacing between the icon and text
+  font-family: 'Times New Roman', serif; // Consistent font
+  font-size: 1rem;
+  color: $theme-primary; // Use primary theme color
+
+  .icon {
+    font-size: 1.5rem; // Adjusted icon size
+    color: $theme-primary; // Use primary theme color for the icon
+    transition: transform 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1); // Slight zoom effect on hover
+      color: darken($theme-primary, 10%); // Darker shade on hover
+    }
+  }
+
+  .text {
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: darken($theme-primary, 10%); // Darker shade on hover
+    }
+  }
+}

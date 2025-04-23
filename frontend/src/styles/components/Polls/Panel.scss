@@ -1,0 +1,74 @@
+.polls-container {
+  @include box-shadow;
+  margin-top: 50px;
+  text-align: center;
+  padding: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #fff; // Clean white background for the panel
+  font-family: 'Times New Roman', serif; // Apply Times New Roman globally
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for a modern look
+
+  &:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); // Enhanced shadow on hover
+  }
+
+  .votes-wrapper {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; // Add spacing between vote items
+  }
+
+  .poll-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .poll-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  .poll-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px; // Add spacing between action buttons
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-family: 'Times New Roman', serif; // Consistent font
+      border: none;
+      border-radius: 5px; // Rounded corners for consistency
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+
+      &.button-primary {
+        background-color: $theme-primary;
+        color: white;
+
+        &:hover {
+          background-color: darken($theme-primary, 10%); // Darker shade on hover
+          transform: scale(1.05); // Slight zoom effect
+        }
+      }
+
+      &.button-secondary {
+        background-color: $theme-secondary;
+        color: white;
+
+        &:hover {
+          background-color: darken($theme-secondary, 10%); // Darker shade on hover
+          transform: scale(1.05); // Slight zoom effect
+        }
+      }
+    }
+  }
+}

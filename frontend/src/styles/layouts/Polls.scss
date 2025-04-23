@@ -1,0 +1,91 @@
+.polls-wrapper {
+  @include boxes-wrapper;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; // Add spacing between polls
+  padding: 20px;
+  font-family: 'Times New Roman', serif; // Apply Times New Roman globally
+  background: #f9f9f9; // Light background for the polls section
+  border-radius: 10px; // Rounded corners for a modern look
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for a clean look
+
+  .poll-wrapper {
+    @include box-wrapper;
+    background: #fff; // White background for individual polls
+    border-radius: 10px; // Rounded corners for a modern look
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for individual polls
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px); // Slight lift on hover
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); // Enhanced shadow on hover
+    }
+
+    .poll-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .candidates-wrapper {
+      @include inner-box-wrapper;
+      display: flex;
+      flex-direction: column;
+      gap: 10px; // Add spacing between candidates
+      margin-top: 10px;
+
+      .candidate-name {
+        @include inner-box-name;
+        padding: 10px 15px;
+        background: #f1f1f1; // Light gray background for candidates
+        border-radius: 5px; // Rounded corners for a modern look
+        font-size: 1rem;
+        color: #555;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Subtle shadow for candidates
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: translateY(-2px); // Slight lift on hover
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Enhanced shadow on hover
+        }
+      }
+    }
+
+    .poll-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px; // Add spacing between action buttons
+      margin-top: 15px;
+
+      button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        font-family: 'Times New Roman', serif; // Consistent font
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease;
+
+        &.edit-button {
+          background: #ffc107; // Yellow background for edit button
+          color: #333;
+
+          &:hover {
+            background: #e0a800; // Darker yellow on hover
+          }
+        }
+
+        &.delete-button {
+          background: #d93025; // Red background for delete button
+          color: white;
+
+          &:hover {
+            background: #a61b1b; // Darker red on hover
+          }
+        }
+      }
+    }
+  }
+}

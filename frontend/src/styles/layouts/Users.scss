@@ -1,0 +1,72 @@
+.users-wrapper {
+  @include boxes-wrapper; // Use the global boxes wrapper for consistent layout
+  gap: 20px; // Add spacing between user cards
+  padding: 20px; // Add padding for better spacing
+  font-family: 'Times New Roman', serif; // Apply Times New Roman globally
+
+  .user-wrapper {
+    @include box-wrapper; // Use the global box wrapper for consistent styling
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; // Add padding for better usability
+    background: #fff; // Ensure a clean white background
+    border-radius: 10px; // Rounded corners for a modern look
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for a clean look
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px); // Slight lift on hover
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); // Enhanced shadow on hover
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+
+      .user-name {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .user-email {
+        font-size: 1rem;
+        color: #555;
+      }
+    }
+
+    .user-actions {
+      display: flex;
+      gap: 10px; // Add spacing between action buttons
+
+      button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        font-family: 'Times New Roman', serif; // Consistent font
+        border: none;
+        border-radius: 5px; // Rounded corners for consistency
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease;
+
+        &.edit-button {
+          background: #ffc107; // Yellow background for edit button
+          color: #333;
+
+          &:hover {
+            background: #e0a800; // Darker yellow on hover
+          }
+        }
+
+        &.delete-button {
+          background: #d93025; // Red background for delete button
+          color: white;
+
+          &:hover {
+            background: #a61b1b; // Darker red on hover
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.form-container {
+  @include box-shadow;
+  min-width: 400px;
+  max-width: 500px; // Added max-width for better responsiveness
+  box-sizing: border-box;
+  padding: 30px; // Increased padding for a cleaner layout
+  border-radius: 15px; // Slightly reduced border radius for a modern look
+  background: #fff; // Ensure a clean white background
+  font-family: 'Times New Roman', serif; // Apply Times New Roman globally
+
+  .input-container {
+    margin-bottom: 20px; // Adjusted spacing for better alignment
+
+    input {
+      border: 1px solid #ccc; // Added a border for better visibility
+      outline: none;
+      background: #f9f9f9; // Light gray background for inputs
+      padding: 12px; // Increased padding for better usability
+      border-radius: 5px;
+      width: 100%; // Ensure full width
+      font-family: 'Times New Roman', serif; // Consistent font
+      font-size: 1rem;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+
+      &::placeholder {
+        opacity: 0.6;
+        font-style: italic; // Added italic style for placeholders
+      }
+
+      &:focus {
+        border-color: #1a73e8; // Highlight border on focus
+        background: #fff; // Change background to white on focus
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: 'Times New Roman', serif; // Consistent font
+    background: #1a73e8; // Primary blue background
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background: #155bb5; // Darker blue on hover
+      transform: scale(1.05); // Slight zoom effect
+    }
+
+    &:disabled {
+      background: #ccc; // Gray background for disabled state
+      cursor: not-allowed;
+    }
+  }
+
+  hr {
+    margin: 30px 0;
+    border: none;
+    border-top: 2px solid #eee; // Light gray divider
+  }
+
+  .form-info-text {
+    text-align: center;
+    color: #1a73e8; // Primary blue color
+    margin: 20px 0;
+    font-size: 0.9rem;
+
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: underline; // Underline on hover
+      }
+    }
+  }
+}
+
+.form-error-text {
+  color: #d93025; // Red color for errors
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  text-align: left; // Align errors to the left
+  text-transform: capitalize; // Capitalize error messages
+}
+
+.form-success-text {
+  color: #34a853; // Green color for success messages
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  text-align: left; // Align success messages to the left
+}

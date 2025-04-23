@@ -1,0 +1,82 @@
+.add-candidate-wrapper {
+  display: flex;
+  justify-content: flex-end; // Align input and button to the right
+  padding: 10px 0; // Add some padding for spacing
+  margin: 0;
+  gap: 10px; // Add consistent spacing between input and button
+
+  input {
+    flex: 3;
+    padding: 10px; // Add padding for better usability
+    border: 1px solid #ccc; // Add a border for better visibility
+    border-radius: 5px; // Rounded corners for a modern look
+    font-family: 'Times New Roman', serif; // Consistent font
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: #1a73e8; // Highlight border on focus
+    }
+  }
+
+  button {
+    flex: 1;
+    padding: 10px;
+    background: #1a73e8; // Primary blue background
+    color: white;
+    border: none;
+    border-radius: 5px; // Rounded corners for consistency
+    font-family: 'Times New Roman', serif; // Consistent font
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background: #155bb5; // Darker blue on hover
+      transform: scale(1.05); // Slight zoom effect
+    }
+
+    &:disabled {
+      background: #ccc; // Gray background for disabled state
+      cursor: not-allowed;
+    }
+  }
+}
+
+.candidates-container {
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap; // Allow wrapping for better responsiveness
+  gap: 10px; // Add consistent spacing between candidate items
+
+  .candidate-wrapper {
+    padding: 10px 20px;
+    background-color: #f1f1f1; // Light gray background for candidates
+    border-radius: 100px; // Rounded pill-like design
+    display: flex;
+    align-items: center;
+    font-family: 'Times New Roman', serif; // Consistent font
+    font-size: 1rem;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Subtle shadow for a modern look
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px); // Slight lift on hover
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Enhanced shadow on hover
+    }
+
+    .remove {
+      font-size: 0.8rem;
+      padding-left: 10px;
+      color: #d93025; // Red color for remove action
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #a61b1b; // Darker red on hover
+      }
+    }
+  }
+}

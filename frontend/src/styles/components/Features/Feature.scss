@@ -1,0 +1,76 @@
+.feature-container {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Added shadow effect
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px); // Slight lift on hover
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); // Enhanced shadow on hover
+  }
+
+  .align-left {
+    text-align: left;
+  }
+  .align-right {
+    text-align: right;
+  }
+
+  .icon-container {
+    font-size: 4rem;
+    padding: 20px;
+    color: #007bff;
+  }
+
+  h3 {
+    font-family: 'Times New Roman', serif; // Updated to Times New Roman
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  p {
+    font-family: 'Times New Roman', serif; // Updated to Times New Roman
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+}
+
+.image-container {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Added shadow effect
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05); // Slight zoom on hover
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); // Enhanced shadow on hover
+    }
+  }
+}
+
+.features-wrapper {
+  font-family: 'Times New Roman', serif; // Apply Times New Roman globally to the wrapper
+  color: #333;
+
+  .title-large {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .title-small {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}

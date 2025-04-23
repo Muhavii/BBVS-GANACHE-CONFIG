@@ -1,0 +1,63 @@
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.vote-status-wrapper {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; // Add spacing between status indicators
+
+  .running {
+    display: flex;
+    align-items: center;
+    gap: 10px; // Add spacing between the dot and text
+    font-family: 'Times New Roman', serif; // Consistent font
+    font-size: 1rem;
+    color: $theme-primary;
+
+    .dot {
+      width: 20px;
+      height: 20px;
+      background-color: $theme-primary;
+      border-radius: 100px;
+      animation: blink 1s linear infinite;
+    }
+
+    .text {
+      font-weight: bold;
+    }
+  }
+
+  .finished {
+    display: flex;
+    align-items: center;
+    gap: 10px; // Add spacing between the icon and text
+    font-family: 'Times New Roman', serif; // Consistent font
+    font-size: 1rem;
+    color: $theme-primary;
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      background-color: #d93025; // Red color for finished status
+      border-radius: 100px;
+    }
+
+    .text {
+      font-weight: bold;
+    }
+  }
+}
