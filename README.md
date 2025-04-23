@@ -124,7 +124,7 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 ## Contact
 
 For questions or feedback, please contact:
-- **Name**: Your Name
-- **Email**: your.email@example.com
+- **Name**: Muteheri Griffins
+- **Email**: griffinsmuhavi.com
 - **GitHub**: [your-username](https://github.com/your-username)
 
