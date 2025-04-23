@@ -125,6 +125,6 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 
 For questions or feedback, please contact:
 - **Name**: Muteheri Griffins
-- **Email**: griffinsmuhavi.com
+- **Email**: griffinsmuhavi@gmail.com
 - **GitHub**: [Muhavii](https://github.com/your-username)
 
