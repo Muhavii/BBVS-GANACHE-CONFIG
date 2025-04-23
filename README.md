@@ -23,14 +23,21 @@ A decentralized voting system built using **React**, **Solidity**, **Truffle**, 
 
 ---
 
-### SYSTEM SCREENSHOT
+### Home Page
 ![system screenshot](Screenshot%20(99).png)
+---
+### Login Page
 ![system screenshot](Screenshot%20(100).png)
+---
+### User Voting Page
 ![system screenshot](Screenshot%20(101).png)
+---
+### View Votes Page 
 ![system screenshot](Screenshot%20(102).png)
+### Features Descripion Page
 ![system screenshot](Screenshot%20(103).png)
 
-
+---
 
 
 ## Prerequisites
